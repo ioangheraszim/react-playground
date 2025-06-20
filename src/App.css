@@ -41,3 +41,20 @@
   color: #FFF;
   font-size: 3rem;
 }
+
+button {
+  width: 100px;
+  height: 100px;
+}
+
+p {
+  font-size: 3rem;
+}
+
+input {
+  font-size: 3rem;
+}
+
+.visible {
+  display: none;
+}
