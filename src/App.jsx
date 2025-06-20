@@ -3,15 +3,22 @@ import { useState } from 'react';
 
 function App() {
   const [text, setText] = useState('');
+  const [visible, setVisible] = useState(false);
+
+  const handleVisible = () => {
+    setVisible(!visible);
+  };
 
   const handleText = (e) => {
     setText(e.target.value);
   };
+
   return (
     <>
       <div>
         <input onChange={handleText} type="text" />
-        <p>{text}</p>
+        <button onClick={handleVisible}>Visible</button>
+        <p className={`${visible ? 'visible' : ''}`}>{text}</p>
       </div>
     </>
   );
