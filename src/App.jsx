@@ -2,24 +2,16 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [number, setNumber] = useState(0);
+  const [text, setText] = useState('');
 
-  const increaseNumber = () => {
-    setNumber((number) => number + 1);
+  const handleText = (e) => {
+    setText(e.target.value);
   };
-
-  const decreaseNumber = () => {
-    setNumber((number) => number - 1);
-  };
-
   return (
     <>
       <div>
-        <button onClick={increaseNumber}>Next</button>
-        <p>{number}</p>
-        <button disabled={number === 0} onClick={decreaseNumber}>
-          Prev
-        </button>
+        <input onChange={handleText} type="text" />
+        <p>{text}</p>
       </div>
     </>
   );
